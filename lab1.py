@@ -39,21 +39,21 @@ class Item():
             raise ValueError("Has to be a number greater than zero")
         self._qty = new_qty
 
+if __name__ == "__main__":
+    sword = Item("Sword","2000","1")
+    kaboom = Item("Bomb","25","12")
 
-sword = Item("Sword","2000","1")
-kaboom = Item("Bomb","25","12")
-
-sword.set_price("2500")
-sword.set_qty("2")
-sword.get_name()
-sword.get_price()
-sword.get_qty()
-print("")
-kaboom.set_price("20")
-kaboom.set_qty("15")
-kaboom.get_name()
-kaboom.get_price()
-kaboom.get_qty()
+    sword.set_price("2500")
+    sword.set_qty("2")
+    sword.get_name()
+    sword.get_price()
+    sword.get_qty()
+    print("")
+    kaboom.set_price("20")
+    kaboom.set_qty("15")
+    kaboom.get_name()
+    kaboom.get_price()
+    kaboom.get_qty()
 
 # Step 2: Implement a getter for the name attribute.
 # This method should simply return the value of the private _name attribute.
