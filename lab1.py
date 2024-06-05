@@ -28,7 +28,7 @@ class Item():
     def get_qty(self):
         print(f"You have {self._qty} {self._name}s")
 
-    #setters
+    #setters    
     def set_price(self,new_price):
         if not new_price.isdigit() or int(new_price) < 0:
             raise ValueError("Price cannot be negative") 
