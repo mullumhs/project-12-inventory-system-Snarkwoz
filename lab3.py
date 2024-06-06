@@ -11,6 +11,8 @@
 
 # Step 1: Import necessary classes (Item class from lab1, InventoryManager class from lab2)
 
+from lab1 import Item
+from lab2 import InventoryManager
 
 # Step 2: Define an add_item function that prompts the user for item details and adds the item to the inventory
 
@@ -27,7 +29,8 @@
 def main():
     # Step 6: Initialise an instance of InventoryManager
     
-
+    manager = InventoryManager()
+    
     # Step 7: Use the actions dictionary to map user input to the corresponding functions
     actions = {}
     
@@ -43,6 +46,23 @@ def main():
 
         # Step 8: Implement the logic to call the appropriate function based on user input
         # Exit the loop if the user chooses 5, otherwise display an error message for invalid choices
+
+        if choice == "1":
+            name = input("Name:")
+            price = input("Price:")
+            qty = input("Qty:")
+            new_item = manager(name,price,qty)
+            manager.add_item(new_item)
+        elif choice == "2":
+        
+        elif choice == "3":
+
+        elif choice == "4":
+            manager.display_items()
+        elif choice == "5":
+            break
+        else:
+            print("nu-uh")
 
 
         

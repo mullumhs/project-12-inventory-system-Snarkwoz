@@ -20,13 +20,13 @@ class Item():
 
     # getters
     def get_name(self):
-        print(self._name)
+        return(self._name)
 
     def get_price(self):
-        print(f"${int(self._price):.2f}")
+        return(f"${int(self._price):.2f}")
 
     def get_qty(self):
-        print(f"You have {self._qty} {self._name}s")
+        return(int(self._qty))
 
     #setters    
     def set_price(self,new_price):
