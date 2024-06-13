@@ -28,14 +28,14 @@ class InventoryManager():
         self._items.append(new_item)
         print(f"{new_item.get_name()} added")
 
-    def remove_item(self,del_item):
-        for item in self._items:
-            if item.get_name() == del_item:
-                self._items.remove(del_item)
-                print(f"Removed {del_item}")
+    def remove_item(self,name):
+        for i,item in self._items:
+            if item.get_name() == name:
+                del self.tickets[i]
                 return
+        print("item not found")
 
-    def update_price(self,name,new_price):
+    def update_item(self,name,new_price):
         for item in self._items:
             if item.get_name() == name:
                 item.set_price(new_price)
@@ -60,11 +60,9 @@ def main():
     print("")
     manager.display_items()
     print("")
-    manager.remove_item(item1)
-    print("")
     manager.display_items()
     print("")
-    manager.update_price(item2,"100")
+    manager.update_item(item2,"100")
     manager.display_items()
 
 if __name__ == "__main__":
